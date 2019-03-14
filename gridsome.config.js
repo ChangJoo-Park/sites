@@ -1,6 +1,6 @@
 module.exports = {
-  siteName: `1Q87`,
-  titleTemplate: `%s - Gridsome`,
+  siteName: `1q87`,
+  titleTemplate: `%s - 1q87`,
 
   plugins: [
     {

@@ -38,7 +38,9 @@ export default {
   .article {
     margin-top: 15px;
   }
-
+  .article > h1 {
+    color: #f5f103;
+  }
   .article h1 {
     font-size: 40px;
   }
@@ -49,7 +51,7 @@ export default {
   }
 
   .article a {
-    color: #4dba87;
+    color: #f5f103;
     text-decoration: underline;
   }
 

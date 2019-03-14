@@ -1,15 +1,17 @@
 <template>
   <div class="layout">
     <header class="header">
-      <g-link class="heading-link" :to="{ name: 'home' }">
-        <component :is="titleTag" class="heading">{{ config.siteName }}</component>
+      <g-link class="heading-link" :to="{ name: 'home' }" style="height:90px">
+        <img src="/logo.png" alt="" width="90px" height="90px">
       </g-link>
       <div class="nav-links">
         <g-link to="/" class="nav-link">Articles</g-link>
         <g-link to="/about" class="nav-link">About</g-link>
       </div>
     </header>
-    <slot/>
+    <transition name="fade" appear>
+      <slot/>
+    </transition>
   </div>
 </template>
 
@@ -36,7 +38,7 @@ export default {
   }
 
   a {
-    color: #4dba87;
+    color: #f5f103;
     text-decoration: none;
   }
 
@@ -57,6 +59,8 @@ export default {
     margin: 0;
     font-size: 16px;
     padding: 0;
+    background-color: rgb(54, 70, 153);
+    color: #eee;
   }
 
   .header {
@@ -67,12 +71,12 @@ export default {
   }
 
   .nav-links .nav-link {
-    color: #333;
+    color: lightgrey;
     margin-right: 1rem;
   }
 
-  .nav-links .nav-link.active--exact.active {
-    color: #4dba87;
+  .nav-links .nav-link.active--exact {
+    color: #f5f103;
   }
 
   .nav-links .nav-link:last-child {
@@ -101,5 +105,13 @@ export default {
     margin-bottom: 20px;
     font-family: 'Noto Sans KR';
     font-weight: bold;
+  }
+
+  .fade-enter-active {
+    transition: opacity .2s;
+  }
+
+  .fade-enter {
+    opacity: 0;
   }
 </style>
