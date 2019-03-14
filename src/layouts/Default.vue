@@ -4,6 +4,10 @@
       <g-link class="heading-link" :to="{ name: 'home' }">
         <component :is="titleTag" class="heading">{{ config.siteName }}</component>
       </g-link>
+      <div class="nav-links">
+        <g-link to="/" class="nav-link">Articles</g-link>
+        <g-link to="/about" class="nav-link">About</g-link>
+      </div>
     </header>
     <slot/>
   </div>
@@ -55,9 +59,30 @@ export default {
     padding: 0;
   }
 
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .nav-links .nav-link {
+    color: #333;
+    margin-right: 1rem;
+  }
+
+  .nav-links .nav-link.active--exact.active {
+    color: #4dba87;
+  }
+
+  .nav-links .nav-link:last-child {
+    margin-right: 0;
+  }
+
   .heading-link {
     color: black;
     text-decoration: none;
+    display: inline-block;
   }
 
   .layout {

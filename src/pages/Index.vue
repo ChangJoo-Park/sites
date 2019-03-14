@@ -29,8 +29,8 @@
 </page-query>
 
 <style scoped>
-  .home >>> .heading {
-    margin-bottom: 70px;
+  .home >>> .header {
+    margin-bottom: 20px;
   }
 
   ul {
