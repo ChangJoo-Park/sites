@@ -1,4 +1,4 @@
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-tomorrow.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { head }) {

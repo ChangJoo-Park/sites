@@ -1,7 +1,7 @@
 module.exports = {
   siteName: `1q87`,
-  titleTemplate: `%s - 1q87`,
-
+  titleTemplate: `%s - ChangJoo Park`,
+  siteUrl: 'changjoo-park.github.io',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -27,7 +27,6 @@ module.exports = {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000, // default
-        exclude: ['/exclude-me'],
         config: {
           '/articles/*': {
             changefreq: 'weekly',

@@ -12,6 +12,16 @@
   </Layout>
 </template>
 
+<script>
+export default {
+  metaInfo () {
+    return {
+      title: '1q87'
+    }
+  }
+}
+</script>
+
 <page-query>
   query Home ($page: Int) {
     allBlogPost (page: $page) {
