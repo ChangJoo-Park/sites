@@ -2,7 +2,8 @@
   "name": "my-gridsome-site",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
+    "build": "gridsome build && npm run deploy",
+    "deploy": "cd dist && git init && git remote add origin git@github.com:ChangJoo-Park/changjoo-park.github.io.git && git push origin +master",
     "dev": "gridsome develop",
     "explore": "gridsome explore"
   },
