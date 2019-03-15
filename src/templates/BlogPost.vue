@@ -1,10 +1,15 @@
 <template>
   <Layout>
     <div class="article">
-      <h1>{{ $page.blogPost.title }}</h1>
-      <span>{{ $page.blogPost.date }}</span>
-      <g-image :src="$page.blogPost.image"/>
+      <div class="article-header">
+        <h1>{{ $page.blogPost.title }}</h1>
+        <span>{{ createdAt }}</span>
+      </div>
+      <g-image :src="$page.blogPost.image" fit="cover" />
       <div class="content" v-html="$page.blogPost.content" />
+      <div>
+        <a href="#" v-for="tag in tags" :key="tag" style="margin-right: .5rem;">{{ tag }}</a>
+      </div>
     </div>
   </Layout>
 </template>
@@ -14,6 +19,21 @@ export default {
   metaInfo () {
     return {
       title: this.$page.blogPost.title
+    }
+  },
+  computed: {
+    createdAt () {
+      try {
+        return (new Date(this.$page.blogPost.date)).toLocaleDateString()
+      } catch (error) {
+        return this.$page.blogPost.date
+      }
+    },
+    tags () {
+      if (!this.$page.blogPost.tags) {
+        return []
+      }
+      return this.$page.blogPost.tags
     }
   }
 }
@@ -26,6 +46,7 @@ export default {
       date (format: "D MMMM, YYYY")
       content
       image
+      tags
     }
   }
 </page-query>
@@ -38,7 +59,12 @@ export default {
   .article {
     margin-top: 15px;
   }
-  .article > h1 {
+
+  .article > .article-header {
+    margin-bottom: 1rem;
+  }
+
+  .article > .article-header > h1 {
     color: #f5f103;
   }
   .article h1 {

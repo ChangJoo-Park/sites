@@ -14,6 +14,6 @@ export default function (Vue, { head }) {
   })
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Noto+Sans+KR'
+    href: '//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css'
   })
 }

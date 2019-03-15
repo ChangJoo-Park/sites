@@ -5,8 +5,8 @@
         <img src="/logo.png" alt="" width="90px" height="90px">
       </g-link>
       <div class="nav-links">
-        <g-link to="/" class="nav-link">Articles</g-link>
-        <g-link to="/about" class="nav-link">About</g-link>
+        <g-link to="/" class="nav-link">글목록</g-link>
+        <g-link to="/about" class="nav-link">블로그에 대하여</g-link>
       </div>
     </header>
     <transition name="fade" appear>
@@ -43,7 +43,7 @@ export default {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Sans KR';
+    font-family: 'Iropke Batang';
   }
 
   h1 {
@@ -55,7 +55,7 @@ export default {
   }
 
   body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Iropke Batang', serif;
     margin: 0;
     font-size: 16px;
     padding: 0;
@@ -103,7 +103,7 @@ export default {
 
   .heading {
     margin-bottom: 20px;
-    font-family: 'Noto Sans KR';
+    font-family: 'Iropke Batang';
     font-weight: bold;
   }
 
